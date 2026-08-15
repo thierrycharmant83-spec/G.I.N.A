@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>G.I.N.A — Application d'hypnose personnalisée | Thierry Marchand</title>
 <meta name="description" content="G.I.N.A génère pour vous une séance d'hypnose unique, en temps réel, adaptée à ce que vous ressentez maintenant. Créée par Thierry Marchand, hypnothérapeute diplômé. Disponible sur App Store et Google Play.">
-<meta name="keywords" content="application hypnose personnalisée, hypnose Ericksonienne, Académie Recherche Connaissance Hypnose Ericksonienne, méditation guidée IA, hypnose smartphone, séance hypnose sans rendez-vous, Thierry Marchand hypnothérapeute, GINA app, hypnose en ligne">
+<meta name="keywords" content="application hypnose personnalisée, hypnose Ericksonienne, Académie Recherche Connaissance Hypnose Ericksonienne, méditation guidée IA, hypnose smartphone, séance hypnose sans rendez-vous, Thierry Marchand hypnothérapeute, GINA app, hypnose en ligne, GINA Coach, abonnement hypnose, accompagnement bien-être">
 <meta property="og:title" content="G.I.N.A — Une séance d'hypnose créée uniquement pour vous">
 <meta property="og:description" content="Pas de séances pré-enregistrées. Chaque séance est générée en temps réel, uniquement pour vous, par un hypnothérapeute diplômé.">
 <meta property="og:type" content="website">
@@ -271,16 +271,13 @@ section { padding: 6rem 2rem; }
 .seance-card p { font-size: 0.9rem; color: rgba(243,235,221,0.7); line-height: 1.7; margin-bottom: 2rem; }
 .seance-price { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; color: var(--gold-light); }
 .seance-price span { font-size: 1rem; color: rgba(243,235,221,0.4); }
-.lot-info {
-  margin-top: 0.5rem;
-  padding: 1.5rem;
-  border: 1px solid rgba(168,139,75,0.15);
-  text-align: center;
-  color: rgba(243,235,221,0.5);
-  font-size: 0.85rem;
+.coach-card {
   grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(168,139,75,0.14), rgba(168,139,75,0.02));
+  border-color: rgba(168,139,75,0.55);
 }
-.lot-info strong { color: var(--gold-light); }
+.coach-card::before { transform: scaleX(1); }
+.coach-card .seance-price { font-size: 1.7rem; }
 
 /* TÉMOIGNAGES */
 .temoignages-section { background: var(--sand-dark); }
@@ -484,8 +481,8 @@ footer { background: var(--brown); padding: 3rem 2rem; text-align: center; borde
       </div>
       <div class="diff-item reveal">
         <div class="diff-number">04</div>
-        <h3>Sans abonnement</h3>
-        <p>Vous achetez ce dont vous avez besoin, quand vous en avez besoin. Votre première séance est offerte.</p>
+        <h3>À l'unité, ou accompagné dans la durée</h3>
+        <p>Achetez une séance quand vous en avez besoin — votre première est offerte. Ou choisissez GINA Coach pour un accompagnement qui évolue avec vous, semaine après semaine.</p>
       </div>
     </div>
   </div>
@@ -526,6 +523,13 @@ footer { background: var(--brown); padding: 3rem 2rem; text-align: center; borde
     <p class="section-label reveal">Les formats</p>
     <h2 class="section-title reveal">Choisissez votre profondeur.</h2>
     <div class="seances-grid">
+      <div class="seance-card coach-card reveal">
+        <p class="seance-type">GINA Coach</p>
+        <h3>Un accompagnement qui apprend de vous</h3>
+        <p class="seance-duration">4 séances par mois</p>
+        <p>Une direction qui s'ajuste avec vous, séance après séance — jamais figée, toujours à l'écoute de ce qui évolue. Le prolongement naturel de G.I.N.A pour celles et ceux qui veulent plus qu'un instant.</p>
+        <div class="seance-price">9,99€ <span>/ mois</span></div>
+      </div>
       <div class="seance-card reveal">
         <p class="seance-type">Essentielle</p>
         <h3>Une pause profonde</h3>
@@ -539,9 +543,6 @@ footer { background: var(--brown); padding: 3rem 2rem; text-align: center; borde
         <p class="seance-duration">Environ 10 minutes</p>
         <p>Une immersion complète. Pour les moments qui comptent vraiment — en soirée, en période de stress intense, ou pour un sujet précis et ciblé.</p>
         <div class="seance-price">3,99€ <span>/ séance</span></div>
-      </div>
-      <div class="lot-info reveal">
-        Également disponible en lot de 10 séances — <strong>Essentielles 24,99€</strong> · <strong>Profondes 34,99€</strong>
       </div>
     </div>
   </div>
@@ -635,6 +636,10 @@ footer { background: var(--brown); padding: 3rem 2rem; text-align: center; borde
         <div class="faq-answer"><div class="faq-answer-inner">Tout dépend de votre objectif. Une séance peut apporter un soulagement immédiat — apaiser une anxiété, retrouver le sommeil, préparer un moment important.<br><br>Pour un travail plus profond — se libérer d'une peur, arrêter de fumer, reprendre confiance en soi, se détacher d'une addiction, traverser un deuil — G.I.N.A peut devenir un véritable programme d'accompagnement. Quelques séances régulières, ciblées sur le même objectif, agissent en profondeur et de façon durable. Quoi qu'il en soit, les séances seront toujours renouvelées et adaptées.<br><br>Et pour celles et ceux qui cherchent simplement un moment de bien-être, G.I.N.A peut s'utiliser comme du cocooning — une bulle de douceur, quand vous en avez besoin, sans programme ni contrainte.</div></div>
       </div>
       <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Qu'est-ce que GINA Coach ?<span class="faq-icon"></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">GINA Coach est un abonnement mensuel (9,99€, 4 séances) qui va plus loin qu'une séance isolée : une direction qui évolue avec vous, séance après séance, avec un rendez-vous bien-être hebdomadaire si vous le souhaitez. Accessible directement depuis l'app, sur l'écran de choix de séance.</div></div>
+      </div>
+      <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">Comment restaurer mes achats ?<span class="faq-icon"></span></button>
         <div class="faq-answer"><div class="faq-answer-inner">Sur l'écran de choix de séance, faites défiler vers le bas — le bouton "Restaurer mes achats" est disponible. Assurez-vous d'être connecté avec le même identifiant Apple ou Google qu'au moment de l'achat.</div></div>
       </div>
@@ -674,6 +679,7 @@ footer { background: var(--brown); padding: 3rem 2rem; text-align: center; borde
     <a href="https://apps.apple.com/us/app/g-i-n-a/id6759822683" target="_blank">App Store</a>
     <a href="https://play.google.com/store/apps/details?id=fr.gina.app" target="_blank">Google Play</a>
     <a href="https://linktr.ee/G.I.N.Accompagnement" target="_blank">Linktree</a>
+    <a href="https://thierrycharmant83-spec.github.io/gina-privacy/" target="_blank">Confidentialité</a>
   </div>
   <p class="footer-copy">© 2026 Thierry Marchand — G.I.N.A · Carqueiranne, Var</p>
 </footer>
